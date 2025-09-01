@@ -1,9 +1,9 @@
-import RegisterForm from "../components/RegisterForm";
+import LoginPage from "../components/LoginPage";
 
 export default function Home() {
   return (
     <main className="flex items-center justify-center min-h-screen">
-      <RegisterForm />
+      <LoginPage />
     </main>
   );
 }

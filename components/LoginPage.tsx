@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Register() {
+export default function LoginPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,34 +16,31 @@ export default function Register() {
           <Image
             src="/Card.png"
             alt="Documents"
-            width={400}
-            height={500}
+            width={300}
+            height={300}
             className="doc-img"
           />
+          {/* Logo in corner */}
+      <img
+        src="sarvia-logo.png"
+        alt="Sarvia"
+        style={{
+          position: "absolute",
+          top: "10px",
+          right: "10px",
+          width: "80px",
+          background: "white",
+          borderRadius: "6px",
+          padding: "4px"
+        }}
+      />
+
         </div>
 
-        {/* Right side Register Form */}
+        {/* Right side Login Form */}
         <div className="right">
-          <h1 className="title">Register</h1>
+          <h1 className="title">Login</h1>
           <form className="form">
-            {/* Name Field */}
-            <label className="label">Name</label>
-            <div className="input-container">
-              <Image
-                src="/user.png"
-                alt="User Icon"
-                width={20}
-                height={20}
-                className="input-icon"
-              />
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your name"
-                className="input"
-              />
-            </div>
 
             {/* Email Field */}
             <label className="label">Email</label>
@@ -65,7 +62,7 @@ export default function Register() {
             </div>
 
             {/* Password Field */}
-            <label className="label">Set Password</label>
+            <label className="label">Password</label>
             <div className="input-container">
               <Image
                 src="/password.png"
@@ -85,27 +82,26 @@ export default function Register() {
 
             {/* Terms */}
             <div className="terms">
-              <input type="checkbox" /> I agree to{" "}
-              <a href="#">Terms and Privacy</a>
+              <a href="#">Forget password?</a>
             </div>
 
             <button type="submit" className="btn">
-              Register
+              Sign in
             </button>
           </form>
 
           {/* Social Login */}
           <div className="social">
-            <p>or continue with</p>
+            <p>----------or continue with----------</p>
             <div className="icons">
               <Image src="/google.png" alt="Google" width={30} height={30} />
               <Image src="/facebook.png" alt="Facebook" width={30} height={30} />
-              <Image src="/linkedIn.png" alt="LinkedIn" width={30} height={30} />
+              <Image src="/LinkedIn.png" alt="LinkedIn" width={30} height={30} />
             </div>
           </div>
 
-          <p className="signin">
-            Already have an account? <a href="/login">Sign In</a>
+          <p className="signup">
+            Don't Have an account, <a href="/Login">Sign Up</a>
           </p>
         </div>
       </div>
